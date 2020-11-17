@@ -1,0 +1,6 @@
+module Pods_RNPChat_RNPChatTests {
+  umbrella header "Pods-RNPChat-RNPChatTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
