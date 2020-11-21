@@ -1,10 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native'
+import { View, SafeAreaView, FlatList, Text } from 'react-native'
 
-export default function Timeline() {
+import auth from '@react-native-firebase/auth';
+import { timelinePage } from './styles';
+import { PostItem, PostInput, Header, TopicSelectModal } from '../components';
+
+export function Timeline() {
+    const user = auth().currentUser;
+    console.log(user);
     return (
-        <View>
-            <Text></Text>
+        <SafeAreaView style={timelinePage.container}>
+        <View style={timelinePage.container}>
+            <Header />
         </View>
+        </SafeAreaView>
     )
 }
