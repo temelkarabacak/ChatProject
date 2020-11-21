@@ -18,7 +18,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9ACACF5BCC26585FF667B93E /* libPods-RNPChat-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7C29D365219B7FE61148B7 /* libPods-RNPChat-tvOS.a */; };
 		AF1A400E5D6C2E82D6C70AF1 /* libPods-RNPChat-RNPChatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A62F8D0B62C973BAD6AD699C /* libPods-RNPChat-RNPChatTests.a */; };
-		B8886C2D2563D57E000A7F30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8886C2C2563D57E000A7F30 /* GoogleService-Info.plist */; };
+		B8F0D981256996B6000050A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8F0D980256996B6000050A2 /* GoogleService-Info.plist */; };
 		C7BDC3F1950380B8B5B9A654 /* libPods-RNPChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FADBD73AC20EB8AEEF2C42 /* libPods-RNPChat.a */; };
 		C9E05F5983DFC44E1ACF0410 /* libPods-RNPChat-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8608BD16EE415C089C311834 /* libPods-RNPChat-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -64,7 +64,7 @@
 		9415BBC2507429A870074123 /* Pods-RNPChat-RNPChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNPChat-RNPChatTests.release.xcconfig"; path = "Target Support Files/Pods-RNPChat-RNPChatTests/Pods-RNPChat-RNPChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D7C29D365219B7FE61148B7 /* libPods-RNPChat-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNPChat-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62F8D0B62C973BAD6AD699C /* libPods-RNPChat-RNPChatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNPChat-RNPChatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8886C2C2563D57E000A7F30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B8F0D980256996B6000050A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F36DD4238E43DDF2BBEA6BC8 /* Pods-RNPChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNPChat.release.xcconfig"; path = "Target Support Files/Pods-RNPChat/Pods-RNPChat.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				B8886C2C2563D57E000A7F30 /* GoogleService-Info.plist */,
+				B8F0D980256996B6000050A2 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* RNPChat */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RNPChatTests */,
@@ -346,7 +346,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				B8886C2D2563D57E000A7F30 /* GoogleService-Info.plist in Resources */,
+				B8F0D981256996B6000050A2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
