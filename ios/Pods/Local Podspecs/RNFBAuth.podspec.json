@@ -23,7 +23,7 @@
 
     ],
     "Firebase/Auth": [
-      "~> 7.0.0"
+      "~> 7.1.0"
     ]
   },
   "static_framework": false
