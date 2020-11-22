@@ -12,15 +12,17 @@ const user = auth().currentUser;
 const Timeline = () => {
     const [topicModalFlag, setTopicModalFlag] = useState(true);
     const [selectedTopic, setSelectedTopic] = useState(null);
+    const [postList, setPostList] = useState([]);
 
     const SelectingTopic = (value) => {
         setSelectedTopic(value);
         setTopicModalFlag(false);
         database()
-            .ref()
+            .ref(value)
             .on('value', (snapshot) => {
-                console.log("----------------------------")
-                console.log('User data: ', snapshot.val());
+                const data = snapshot.val();
+                const formattedData = Object.keys(data).map(key => ({...data[key]}))
+                setPostList(formattedData);
             });
     };
 
@@ -33,6 +35,8 @@ const Timeline = () => {
         database().ref(`${selectedTopic}/`).push(postObject);
     };
 
+    const renderPosts = ({item}) => <PostItem post={item} />
+
     return (
         <SafeAreaView style={timelinePage.container}>
         <View style={timelinePage.container}>
@@ -43,8 +47,9 @@ const Timeline = () => {
             />
 
             <FlatList
-            data={[]}
-            renderItem={() => null}
+            keyExtractor={(_, i) => i.toString()}
+            data={postList}
+            renderItem={renderPosts}
             />
 
             <PostInput
