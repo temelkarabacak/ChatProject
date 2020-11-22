@@ -1,18 +1,42 @@
-import React from 'react';
-import { View, SafeAreaView, FlatList, Text } from 'react-native'
+import React, { useState } from 'react';
+import { View, SafeAreaView, FlatList, Text } from 'react-native';
 
-import auth from '@react-native-firebase/auth';
 import { timelinePage } from './styles';
-import { PostItem, PostInput, Header, TopicSelectModal } from '../components';
+import { PostItem, PostInput, Header, TopicSelectedModal } from '../components';
 
-export function Timeline() {
-    const user = auth().currentUser;
-    console.log(user);
+const Timeline = () => {
+    const [topicModalFlag, setTopicModalFlag] = useState(false);
+    const [selectedTopic, setSelectedTopic] = useState(null);
     return (
         <SafeAreaView style={timelinePage.container}>
         <View style={timelinePage.container}>
-            <Header />
+
+            <Header 
+            title={selectedTopic}
+            onTopicModalSelect={() => setTopicModalFlag(true)}
+            />
+
+            <FlatList
+            data={[]}
+            renderItem={() => null}
+            />
+
+            <PostInput
+            onSendPost={(value) => console.log(value)}
+            />
+
+            <TopicSelectedModal 
+            visibility={topicModalFlag}
+            onClose={() => selectedTopic ? setTopicModalFlag(false) : null}
+            onTopicSelect={(value) => {
+                setSelectedTopic(value);
+                setTopicModalFlag(false);
+            }}
+            />
+
         </View>
         </SafeAreaView>
     )
 }
+
+export {Timeline};

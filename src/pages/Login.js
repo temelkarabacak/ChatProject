@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { SafeAreaView, View, Text, Dimensions, Image, ScrollView, KeyboardAvoidingView, Alert } from 'react-native';
 import auth from '@react-native-firebase/auth';
 import { authStyle } from './styles';
@@ -8,6 +8,8 @@ import { resolveErrorCode } from '../Functions';
 const Login = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    inputRefMail = useRef();
+    inputRefPassword = useRef();
 
     // const login = () => {
     //     auth()
@@ -22,6 +24,8 @@ const Login = (props) => {
                 Alert.alert('Vahid Chat', resolveErrorCode('auth/null-value'));
             } else {
                 await auth().signInWithEmailAndPassword(email, password);
+                inputRefMail.current.clear();
+                inputRefPassword.current.clear();
                 // alert(email + "   " + password);
                 props.navigation.navigate('Timeline');
             }

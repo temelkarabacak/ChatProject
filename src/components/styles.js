@@ -77,10 +77,12 @@ export const post_input = StyleSheet.create({
       padding: 5,
       flexDirection: 'row',
       borderWidth: 1,
-      borderColor: "#b0bec5"
-   },  
-   inputContainer: {
+      borderColor: "#b0bec5",
+    },  
+    inputContainer: {
       flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'space-between'
    },
    button: {
 
