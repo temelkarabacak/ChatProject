@@ -21,7 +21,7 @@ const Header = (props) => {
                 name="login"
                 size={30}
                 color="#69007f"
-                onPress={props.logout}
+                onPress={props.onLogout}
                 />
 
             </View>

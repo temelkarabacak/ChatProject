@@ -22,6 +22,9 @@ const Timeline = () => {
             .on('value', (snapshot) => {
                 const data = snapshot.val();
                 const formattedData = Object.keys(data).map(key => ({...data[key]}))
+                formattedData.sort((a, b) => {
+                    return new Date(a.time) - new Date(b.time);
+                })
                 setPostList(formattedData);
             });
     };
@@ -44,6 +47,7 @@ const Timeline = () => {
             <Header 
             title={selectedTopic}
             onTopicModalSelect={() => setTopicModalFlag(true)}
+            onLogout={() => auth().signOut()}
             />
 
             <FlatList
